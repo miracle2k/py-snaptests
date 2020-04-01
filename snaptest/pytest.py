@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 import os
 from os import path
 import hashlib
@@ -84,7 +84,7 @@ def snapshot(request):
         else:
             try:
                 content = ops.get_snapshot(snapshot_name)
-                print "Update the snapshot with --write %s" % snapshot_id[:5]
+                print("Update the snapshot with --write %s" % snapshot_id[:5])
                 assert content == result
             except ValueError:
                 raise ValueError("Snapshot for this test does not exist. Generate it with --write %s" % snapshot_id[:5])
